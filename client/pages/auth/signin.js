@@ -32,7 +32,7 @@ export default () => {
 
                 <div className="card-body">
 
-                    <h3 className="card-title text-center mb-4">Sign Up</h3>
+                    <h3 className="card-title text-center mb-4">Sign In</h3>
 
                     <form onSubmit={onSubmit}>
 
@@ -69,7 +69,7 @@ export default () => {
 
                         </div>
 
-                        <button className="btn btn-primary">Sign Up</button>
+                        <button className="btn btn-primary">Sign In</button>
                     </form>
                 </div>
             </div>

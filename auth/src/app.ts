@@ -5,8 +5,7 @@ import { currentuserRouter } from './routes/current-user';
 import { signInRouter } from './routes/signin';
 import { signUpRouter } from './routes/signup';
 import { signOutRouter } from './routes/signout';
-import { errorHandler } from './middleware/error-handler';
-import { NotFoundError } from './errors/not-found-error';
+import { errorHandler , NotFoundError } from '@dj_ticketing/common';
 
 import cookieSession from 'cookie-session';
 
