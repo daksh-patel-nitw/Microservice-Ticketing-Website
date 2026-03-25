@@ -22,6 +22,7 @@ const setup = async () => {
         ticket,
         expiresAt: new Date()
     })
+    await order.save();
 
     const data: ExpirationCompletedEvent['data'] = {
         orderId: order.id
@@ -32,13 +33,12 @@ const setup = async () => {
         ack: jest.fn()
     }
 
-    return { listener, order, ticket, data, msg };
+    return { listener, order, data, msg };
 }
 
 
 it('Updates the order status to cancelled', async () => {
-    const { listener, data, msg, ticket, order } = await setup();
-
+    const { listener, data, msg, order } = await setup();
     await listener.onMessage(data, msg);
 
     const updatedOrder = await Order.findById(order.id);
