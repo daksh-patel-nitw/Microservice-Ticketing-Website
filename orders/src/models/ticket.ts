@@ -73,7 +73,6 @@ ticketSchema.statics.findByEvent = (event: { id: string, version: number }) => {
 }
 
 ticketSchema.set('versionKey','version');
-ticketSchema.set('optimisticConcurrency',true);
 
 const Ticket = mongoose.model<TicketDoc, TicketModel>('Ticket', ticketSchema);
 
