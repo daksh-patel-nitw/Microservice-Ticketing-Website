@@ -45,6 +45,7 @@ router.post(
       description
     })
 
+    console.log("got charge.")
     const payment = Payment.build({
       orderId,
       stripeId: charge.id
@@ -55,7 +56,6 @@ router.post(
       orderId: payment.orderId
     })
     res.status(201).send({ success: true })
-
   }
 );
 
